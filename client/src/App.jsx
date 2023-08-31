@@ -1,20 +1,20 @@
 import { useState } from 'react';
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import './App.css';
 
 function App() {
   const [todo, setTodo] = useState("");
   const [todoList, setTodoList] = useState([]);
 
-  useEffect(() => {
-    fetch("http://localhost:3000/todo")
-      .then((res) => {
-        res.json()
-        .then((data) => {setTodo(data.todo)
-         setTodo(data);
-        });
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("http://localhost:3000/todo")
+  //     .then((res) => {
+  //       res.json()
+  //       .then((data) => {setTodo(data.todo)
+  //        setTodo(data);
+  //       });
+  //     });
+  // }, []);
 
   const handleForm = (e) => {
     e.preventDefault();
